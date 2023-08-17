@@ -21,8 +21,9 @@ function get_pm25() {
       return '🟤';
     }
   }
-  
-  LINE_CHANNEL_ACCESS_TOKEN = 'S+jwfH8GrnoRYfWRcbU3WNBFxY5bRQyymgCAsSBQlyL355IHEgazsKumRShcgHYScrpESbUJo0Pnx5RZYPWRpe4mg+1SzWMIdJRX7si7YFZ4xlFT2qGR3BqWDwzEr2pHIjskUuKji4ioBoyIXifp2gdB04t89/1O/w1cDnyilFU='
+
+  //In this line use your Line_Channel_Access_Token in Line developer web.
+  LINE_CHANNEL_ACCESS_TOKEN = {Your_Channel_Access_Token}
   
   function send_line_message(user_id, text) {
     var url = 'https://api.line.me/v2/bot/message/push';
@@ -51,6 +52,7 @@ function get_pm25() {
     sheet.appendRow(rowData);
   
     var message = '🔔 Current PM2.5 level in Bangkok: ' + pm25 + ' - ' + aqi_emoji;
+    //In this line use your line user id in Line developer.
     send_line_message('U4a893cc3ef4509201fc92a651acceb35', message);
   }
   
